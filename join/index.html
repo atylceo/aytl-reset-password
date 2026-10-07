@@ -39,7 +39,9 @@
 <script>
   // The invite's code is the last part of the address: /join/K7Q2XM.
   var code = (location.pathname.split('/').filter(Boolean)[1] || '').replace(/[^A-Za-z0-9]/g, '').slice(0, 12);
-  document.getElementById('open').href = 'seamsight://join/' + encodeURIComponent(code);
+  // A practice to join comes along too (?practice=…).
+  var practice = (new URLSearchParams(location.search).get('practice') || '').replace(/[^A-Za-z0-9]/g, '').slice(0, 12);
+  document.getElementById('open').href = 'seamsight://join/' + encodeURIComponent(code) + (practice ? '?practice=' + encodeURIComponent(practice) : '');
 </script>
 </body>
 </html>
