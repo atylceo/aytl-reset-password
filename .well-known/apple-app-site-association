@@ -1,0 +1,12 @@
+{
+  "applinks": {
+    "details": [
+      {
+        "appIDs": ["KT23BVHH8F.com.aytl.TennisCoach"],
+        "components": [
+          { "/": "/join/*", "comment": "A practice partner invite (US-P81)" }
+        ]
+      }
+    ]
+  }
+}
